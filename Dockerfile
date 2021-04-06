@@ -8,7 +8,10 @@ MAINTAINER forfuns <my-tangjianbin@163.com>
 ENV MVN_VERSION 3.6.3
 
 # Install packages
+
+# Install git
 RUN yum install -y git
+
 # Install Maven
 RUN yum install -y curl tar gzip && \
     curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MVN_VERSION/binaries/apache-maven-$MVN_VERSION-bin.tar.gz | tar xzf - -C /usr/share && \
