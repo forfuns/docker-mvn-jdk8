@@ -2,11 +2,13 @@ FROM store/oracle/serverjre:1.8.0_241-b07
 
 # Maintainer
 MAINTAINER shinyay <shinya.com@gmail.com>
+MAINTAINER forfuns <my-tangjianbin@163.com>
 
 # Set environment variable for Maven version
 ENV MVN_VERSION 3.6.3
 
 # Install packages
+RUN yum install -y git
 # Install Maven
 RUN yum install -y curl tar gzip && \
     curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MVN_VERSION/binaries/apache-maven-$MVN_VERSION-bin.tar.gz | tar xzf - -C /usr/share && \
